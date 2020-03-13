@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loader Library</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+        integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-4.2.1/dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- loader spinner -->
+    <div class="preload">
+        <div>
+            <p class="text-center text-white d-block">Loading...</p>
+            <div class="spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-light" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-dark" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="./">iballi2017@gmail.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./page-2.html">Test Images<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./docs.html">Docs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main contaent -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="my-5 text-center">How To Implement Page-loader In Your Project Using Javascript and
+                        jQuery</h1>
+
+                    <dl>
+                        <dt>
+                            <h4>Step 1: Get a Spinner or animation component for your project</h4>
+                        </dt>
+                        <dd>
+                            In this project, I used a group of Bootstrap 4 <a
+                                href="https://getbootstrap.com/docs/4.3/components/spinners/"
+                                target="_blank">Spinners</a>. You can use one depending on your preference.
+
+                        </dd>
+                        <dd>
+                            Create a div tag to contain your spinner and give it a className. In this project, I named
+                            it "preload". Place this div container and its content immediately after your opening body
+                            tag. Then give it style like below:
+                        </dd>
+                        <dd>
+                            <code>
+                                .preload {
+                                  position: fixed;
+                                  top: 0;
+                                  width: 100%;
+                                  height: 100vh;
+                                  background: #202020;
+                                  z-index: 2000;
+                                  display: flex;
+                                  justify-content: center;
+                                  align-items: center;
+                                  transition: opacity 0.5s ease;
+                                }
+                                
+                                .preload-finish {
+                                  opacity: 0;
+                                  pointer-events: none;
+                                }
+                                </code>
+                        </dd>
+
+                        <dd>
+                            NOTE: "preload-finish", is a class that makes "preload" disappears when it is attached.
+                            Javascript will do the attachment dynamically.
+                        </dd>
+                        <dd>
+
+                            Add the following JavaScript codes;
+                        </dd>
+                        <dd>
+                            <h5>option 1:</h5>
+                            <code>
+
+                                $(window).on("load", function () {
+                                    $(".preload").hide("slow")
+                                  })
+                                  
+                                  </code>
+                            <p>
+                                This code doesn't need you to create a "preload-finish" class</p>
+                        </dd>
+                        <dd>
+                            <h5>option 2:</h5>
+                            <code>
+                                $(".preload").addClass("preload-finish")
+                                  </code>
+                            <p>
+                                This code will append "preload-finish" class when the page loads</p>
+                        </dd>
+                        <dd>
+                            <h5>option 3:</h5>
+                            <code>
+
+                                window.addEventListener("load", () => {
+                                    const preload = document.querySelector(".preload")
+                                    preload.classList.add("preload-finish")
+      })
+                                  </code>
+                            <p>
+                                This code will also append "preload-finish" class when the page loads</p>
+                        </dd>
+
+                        <dd>
+                            You can also use this method of preloader at different sections of your page. For example,
+                            if
+                            you're fetching images/videos from a CDN, it might take time for the image to arrive. You
+                            only need
+                            to remove "window" from your code and replace with the class or id of the container element.
+
+                            <code>
+                            $(".image-container").on("load", function () {
+                                $(".preload").hide("slow")
+                            })
+                            </code>
+
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>How To Test</h4>
+                    <p>You can see the result of a preloader when you reload your page. If your network is very fast,
+                        you might not notice it. You will definitely notice if you have a poor network.</p>
+
+                    <p>
+                        <dl>
+                            <dt>
+                                To text our work
+                            </dt>
+                            <dd>press "Ctrl+Shift+I" on your keyboard</dd>
+                            <dd>Locate "Network" and click it</dd>
+                            <dd>Locate "Online", and seclect "Slow 3G". this will enable our machine to process in a
+                                slow manner</dd>
+                            <dd>Hard-refresh your page with "Ctrl+F5" or "Ctrl+Shift+R", and you'll see your preloaded
+                                animating, waiting
+                                for your page to
+                                load before it disappears.</dd>
+                        </dl>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./bootstrap-4.2.1/dist/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="./app.js"></script>
+</body>
+
+</html>

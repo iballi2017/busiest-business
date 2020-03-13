@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="./bootstrap-4.2.1/dist/css/bootstrap.min.css">
-    <!-- custom css -->
-    <link rel="stylesheet" href="./css/style.css">
-
+    <!-- section scroll animation library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Busiest Business</title>
 </head>
@@ -177,7 +178,7 @@
         <div class="container py-5">
 
             <div class="sector-client-portfolio-wrapper">
-                <div class="column-1">
+                <div class="column-1 item" data-aos="fade-right">
                     <!-- 1 -->
                     <div class="card border-0">
                         <img data-src="./images/stil--837JygbCJo-unsplash.png" class="card-img-top lazy-image"
@@ -193,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-2">
+                <div class="column-2 itme" data-aos="fade-up">
                     <!-- 2 -->
                     <div class="card border-0 mb-2">
                         <img data-src="./images/mimi-thian-5ZnS3wK6sUg-unsplash.png" class="card-img-top lazy-image"
@@ -209,7 +210,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-3">
+                <div class="column-3 itme" data-aos="fade-left">
                     <!-- 3 -->
                     <div class="card mb-3 border-0">
                         <div class="row no-gutters">
@@ -298,19 +299,19 @@
         <!-- contact us banner -->
         <div class="contact-us-banner" id="about-us">
             <div class="wrapper contact-us-inner">
-                <h5>Build your dream product with us.</h5>
-                <a class=" contact-us-btn" href="#contact-us">CONTACT US TODAY</a>
+                <h5 class="item" data-aos="fade-right">Build your dream product with us.</h5>
+                <a class="contact-us-btn item" href="#contact-us" data-aos="fade-left">CONTACT US TODAY</a>
             </div>
         </div>
 
         <!-- who we are -->
         <section class="wrapper who-we-are-section-1">
-            <div class="column-1">
+            <div class="column-1 item" data-aos="fade-right">
                 <!-- 1 -->
                 <img class="img img-fluid lazy-image" data-src="./images/dominik-vanyi-Mk2ls9UBO2E-unsplash 3.png"
                     alt="">
             </div>
-            <div class="column-2">
+            <div class="column-2 item" data-aos="zoom-in">
                 <div>
                     <!-- 2 -->
                     <h3 class="">Who we are ?</h3>
@@ -324,9 +325,10 @@
                                 class="fas fa-caret-right icon ml-2"></i></a></p>
                 </div>
             </div>
-            <div class="column-3">
+            <div class="column-3 item" data-aos="fade-left">
                 <!-- 3 -->
                 <img class="img img-fluid lazy-image" data-src="./images/fran-hogan-AmbJWDg4_28-unsplash 2.png" alt="">
+
             </div>
         </section>
 
@@ -334,24 +336,21 @@
 
         <section class="wrapper mt-3" id="services">
             <ul class="company-efforts">
-                <li class="best-product">
-
+                <li class="best-product item" data-aos="fade-right">
                     <div class="content">
                         <h5>Best Product</h5>
                         <p>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
                     </div>
                 </li>
-                <li class="proper-quality">
-
+                <li class="proper-quality item" data-aos="fade-up">
                     <div class="content">
                         <h5>Proper Quality</h5>
                         <p>
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
                     </div>
                 </li>
-                <li class="high-conversion">
-
+                <li class="high-conversion item" data-aos="fade-left">
                     <div class="content">
                         <h5>High Conversion</h5>
                         <p>
@@ -368,7 +367,7 @@
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-md-6 p-0">
+                        <div class="col-12 col-md-6 p-0 item" data-aos="fade-right">
 
                             <h5>Why should you work with us ?</h5>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -392,10 +391,15 @@
                             </ul>
                         </div>
 
-                        <div class="col-12 col-md-6 p-0">
+                        <div class="col-12 col-md-6 p-0 item" data-aos="fade-left">
                             <div class="video-container">
+                                <div class="preload-video">
+                                    <div class="spinner-grow text-secondary" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </div>
                                 <iframe data-src="https://www.youtube.com/embed/8TnBZ8rom9c" frameborder="0"
-                                    class="lazy-image"
+                                    class="lazy-image youtube-vid"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                             </div>
@@ -413,7 +417,7 @@
 
             <div class="projects-list">
 
-                <div class="column-1">
+                <div class="column-1 item" data-aos="fade-right">
                     <div class="card border-0 mt-3">
                         <img data-src="./images/jordan-harrison-40XgDxBfYXM-unsplash.png"
                             class="card-img-top lazy-image" alt="...">
@@ -424,7 +428,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-2">
+                <div class="column-2 item" data-aos="zoom-in">
                     <div class="card border-0 mt-3">
                         <img data-src="./images/claudio-hirschberger-VI1UCQe4U4A-unsplash.png"
                             class="card-img-top lazy-image" alt="...">
@@ -435,7 +439,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-3">
+                <div class="column-3 item" data-aos="fade-left">
                     <div class="card border-0 mt-3">
                         <img data-src="./images/annie-gray-WEWTGkPUVT0-unsplash.png" class="card-img-top lazy-image"
                             alt="...">
@@ -458,7 +462,7 @@
 
 
         <section class="wrapper feedback-container mt-5">
-            <div class="column-1">
+            <div class="column-1 item" data-aos="fade-right">
                 <div class="content">
                     <p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -468,7 +472,7 @@
                     <h6>UX Designer</h6>
                 </div>
             </div>
-            <div class="column-2">
+            <div class="column-2 item" data-aos="zoom-in">
                 <div class="content">
                     <p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -479,7 +483,7 @@
                 </div>
 
             </div>
-            <div class="column-3">
+            <div class="column-3 item" data-aos="fade-left">
                 <div class="content">
                     <p>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -496,8 +500,8 @@
         <!-- contact us banner -->
         <div class="contact-us-banner my-4" id="blog">
             <div class="wrapper contact-us-inner">
-                <h5>Build your dream product with us.</h5>
-                <a class=" contact-us-btn" href="#contact-us">CONTACT US TODAY</a>
+                <h5 class="item" data-aos="fade-right">Build your dream product with us.</h5>
+                <a class="contact-us-btn item" href="#contact-us" data-aos="fade-left">CONTACT US TODAY</a>
             </div>
         </div>
 
@@ -510,7 +514,7 @@
 
             <div class="projects-list">
 
-                <div class="column-1">
+                <div class="column-1 item" data-aos="fade-right">
                     <div class="card border-0 mt-3">
                         <img data-src="./images/jordan-harrison-40XgDxBfYXM-unsplash.png"
                             class="card-img-top lazy-image" alt="...">
@@ -523,7 +527,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-2">
+                <div class="column-2 item" data-aos="zoom-in">
                     <div class="card border-0 mt-3">
                         <img data-src="./images/claudio-hirschberger-VI1UCQe4U4A-unsplash.png"
                             class="card-img-top lazy-image" alt="...">
@@ -536,7 +540,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-3">
+                <div class="column-3 item" data-aos="fade-left">
                     <div class="card border-0 mt-3">
                         <img data-src="./images/annie-gray-WEWTGkPUVT0-unsplash.png" class="card-img-top lazy-image"
                             alt="...">
@@ -570,7 +574,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <form class="">
+                        <form class="item" data-aos="fade-right">
                             <div class="form-group">
                                 <label for="exampleInputName">Name</label>
                                 <input type="text" class="form-control" id="exampleInputName"
@@ -591,7 +595,7 @@
                         </form>
                     </div>
                     <div class="col-12 col-md-6">
-                        <div class="">
+                        <div class="item" data-aos="fade-left">
                             <div style="overflow:hidden;width: 100%;position: relative;"><iframe width="600"
                                     height="400"
                                     src="https://maps.google.com/maps?hl=en&amp;q=Abule-egba, Lagos+(Abule-egba, Lagos)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
@@ -694,6 +698,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- section scroll animation library -->
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <!-- custom js -->
     <script src="./js/app.js"></script>
 </body>
 

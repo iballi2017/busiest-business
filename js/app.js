@@ -9,10 +9,22 @@ $(document).ready(function () {
   });
   myLazyLoad();
 
+
 })
 
 
-window.addEventListener("load", () => {
-  const preload = document.querySelector(".preload")
-  preload.classList.add("preload-finish")
+/* .......Page loader.......*/
+$(window).on("load", function () {
+  $(".preload").hide("slow")
+  // $(".preload").addClass("preload-finish")    //this works as well
+})
+
+/* .......youtube video loader.......*/
+$(".youtube-vid").on("load", function () {
+  $(".preload-video").hide("slow")
+})
+
+// section scroll animation library
+AOS.init({
+  duration: 1200,
 })

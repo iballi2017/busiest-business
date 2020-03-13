@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loader Library</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+        integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- loader spinner -->
+    <div class="preload">
+        <div>
+            <p class="text-center text-white d-block">Loading...</p>
+            <div class="spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-light" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-dark" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="./">iballi2017@gmail.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./page-2.html">Test Images<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./docs.html">Docs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- main contaent -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-4">
+                    <div class="card mt-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRNsViqEtkdXJ7hOUgzyxJrfl5pTOsyW09HFq1yHJh8Wqmk1rFU"
+                            class="card-img-top" alt="..." style="height: 200px">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="card mt-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyjakZZUdoyUXkmNTh-gtecRvPwYR0i5vlcPB7YcLPsLLPDB8i"
+                            class="card-img-top" alt="..." style="height: 200px">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="card mt-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROAmI56WTyqKjLflOumXjh5lYKlS1rAuN5pjikG_yHWPlWTHpj"
+                            class="card-img-top" alt="..." style="height: 200px">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="card mt-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQWWPPI-3TUN4tVM-rYhySXPTnE6-sBK8elFIjY370MEmDRqKeY"
+                            class="card-img-top" alt="..." style="height: 200px">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="card mt-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRPgJOmTROcJvy_ps0pyIKvZCDaKNH3AFgT5dfa_9IcxItlcc-D"
+                            class="card-img-top" alt="..." style="height: 200px">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <div class="card mt-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbqmcsCIxd4P55pYyUMY0DbwMXG2rgJIzmNSHiB4S8dGuW8AxF"
+                            class="card-img-top" alt="..." style="height: 200px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- lazy loading -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
