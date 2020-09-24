@@ -30,6 +30,9 @@ body {
   width: 90%;
   margin: 0 auto; }
 
+.navbar-toggler:focus {
+  outline: 0; }
+
 .business-contact {
   background-color: #0c0b0b;
   color: #ffffff; }
@@ -85,6 +88,16 @@ body {
 .carousel-caption-3 h3 {
   color: #ffffff !important;
   text-align: left; }
+
+.hero {
+  height: 600px;
+  background-image: url("../images/frank-busch-g7uPG8w1XV8-unsplash.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+  background-attachment: fixed;
+  background-position: center; }
 
 .hero-button {
   background-color: #c3951f !important;
