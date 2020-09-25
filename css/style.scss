@@ -12,6 +12,7 @@ $componentYellow: #c3951f;
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; //to get rid off the scrollbar created by the aos.css plugin
 }
 
 .preload {
