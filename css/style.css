@@ -64,32 +64,6 @@ body {
       color: #b11f1f !important;
       font-weight: 600; }
 
-.carousel-caption-1 h1 {
-  color: #ff4800 !important;
-  text-align: left; }
-
-.carousel-caption-1 h3 {
-  color: #4b1905 !important;
-  text-align: left; }
-
-.carousel-caption-2 h1 {
-  color: #095729 !important;
-  text-align: left;
-  text-shadow: 1px 1px #ffffff; }
-
-.carousel-caption-2 h3 {
-  color: #0ba14f !important;
-  text-align: left;
-  text-shadow: 1px 1px #ccc; }
-
-.carousel-caption-3 h1 {
-  color: #ffffff !important;
-  text-align: left; }
-
-.carousel-caption-3 h3 {
-  color: #ffffff !important;
-  text-align: left; }
-
 .hero {
   height: 600px;
   background-image: url("../images/frank-busch-g7uPG8w1XV8-unsplash.png");
@@ -107,12 +81,17 @@ body {
     background-color: #4e3b09 !important;
     color: #ffffff !important; }
 
-.custom-page-link {
-  color: #c3951f;
+.custom-page-link,
+.custom-page-link-alt {
+  color: #202020;
   font-weight: 500; }
-  .custom-page-link:hover {
+  .custom-page-link:hover,
+  .custom-page-link-alt:hover {
     text-decoration: none;
     color: #b11f1f; }
+
+.custom-page-link-alt {
+  color: #b11f1f; }
 
 .card-title {
   font-weight: 600; }
@@ -138,18 +117,17 @@ body {
   padding: 0.7em;
   width: 30%;
   color: #202020;
-  font-size: 1rem; }
-
-.contact-us-btn:hover {
-  background-color: #4e3b09;
-  text-decoration: none;
-  color: #ffffff; }
+  font-size: 1rem;
+  transition: all 300ms ease-in-out; }
+  .contact-us-btn:hover {
+    background-color: #4e3b09;
+    text-decoration: none;
+    color: #ffffff; }
 
 .contact-us-inner {
   text-align: center; }
-
-.contact-us-inner h5 {
-  margin-bottom: 1em; }
+  .contact-us-inner h5 {
+    margin-bottom: 1em; }
 
 .section-title {
   text-align: center; }

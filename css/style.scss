@@ -92,38 +92,6 @@ body {
     }
 }
 
-.carousel-caption-1 h1 {
-    color: rgb(255, 72, 0) !important;
-    text-align: left;
-}
-
-.carousel-caption-1 h3 {
-    color: rgb(75, 25, 5) !important;
-    text-align: left;
-}
-
-.carousel-caption-2 h1 {
-    color: #095729 !important;
-    text-align: left;
-    text-shadow: 1px 1px $white;
-}
-
-.carousel-caption-2 h3 {
-    color: #0ba14f !important;
-    text-align: left;
-    text-shadow: 1px 1px #ccc;
-}
-
-.carousel-caption-3 h1 {
-    color: $white !important;
-    text-align: left;
-}
-
-.carousel-caption-3 h3 {
-    color: $white !important;
-    text-align: left;
-}
-
 .hero {
     height: 600px;
     background-image: url("../images/frank-busch-g7uPG8w1XV8-unsplash.png");
@@ -144,13 +112,18 @@ body {
     }
 }
 
-.custom-page-link {
-    color: $componentYellow;
+.custom-page-link,
+.custom-page-link-alt {
+    color: $black;
     font-weight: 500;
     &:hover {
         text-decoration: none;
         color: $brown;
     }
+}
+
+.custom-page-link-alt {
+    color: $brown;
 }
 
 .sector-client-portfolio-wrapper div:nth-child(odd) {
@@ -193,20 +166,19 @@ body {
     width: 30%;
     color: $black;
     font-size: 1rem;
-}
-
-.contact-us-btn:hover {
-    background-color: rgb(78, 59, 9);
-    text-decoration: none;
-    color: $white;
+    transition: all 300ms ease-in-out;
+    &:hover {
+        background-color: rgb(78, 59, 9);
+        text-decoration: none;
+        color: $white;
+    }
 }
 
 .contact-us-inner {
     text-align: center;
-}
-
-.contact-us-inner h5 {
-    margin-bottom: 1em;
+    h5 {
+        margin-bottom: 1em;
+    }
 }
 
 .section-title {
